@@ -71,19 +71,19 @@ export class Router {
      */
 
     if(this[page] == undefined){
-      console.log("error "+this[page]);
+      console.log('error '+this[page]);
     }
     else{
       let hash;
       if(page == 'home'){
-        hash = '';
+        hash = ' ';
       }
       else{
         hash = '#'+page;
       }
 
       if(!statePopped && window.location.hash != hash){
-        window.history.pushState({page: page}, page, hash);
+        window.history.pushState({page:hash}, page, hash);
       }
       this[page]();
     }
