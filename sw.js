@@ -12,7 +12,6 @@ self.addEventListener('install', function (event) {
 
   // https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests
    var urlsToCache = [
-     '/',
      'assets/styles/main.css',
      'assets/scripts/main.js'
    ];
