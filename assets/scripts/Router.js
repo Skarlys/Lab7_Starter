@@ -22,7 +22,7 @@ export class Router {
    */
   constructor(homeFunc) {
     this['home'] = homeFunc;
-
+    
   }
 
   /**
