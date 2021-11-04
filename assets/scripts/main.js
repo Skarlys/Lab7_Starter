@@ -12,7 +12,7 @@ const recipes = [
 ];
 const recipeData = {} // You can access all of the Recipe Data from the JSON files in this variable
 
-const router = new router(function () {
+const router = new Router(function () {
   /** 
    * TODO - Part 1 - Step 1
    * Select the 'section.section--recipe-cards' element and add the "shown" class

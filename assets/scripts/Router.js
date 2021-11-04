@@ -1,4 +1,4 @@
-// router.js
+// Router.js
 
 /** Some hints for this router:
   *   - the functions being passed in should mostly be stored so that
@@ -22,7 +22,7 @@ export class Router {
    */
   constructor(homeFunc) {
     this['home'] = homeFunc;
-    
+
   }
 
   /**
