@@ -11,7 +11,7 @@ self.addEventListener('install', function (event) {
    */
 
   // https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests
-  /**
+
    var urlsToCache = [
      'assets/styles/main.css',
      'assets/scripts/main.js'
@@ -25,7 +25,7 @@ self.addEventListener('install', function (event) {
            return cache.addAll(urlsToCache);
          })
      );
-     */
+
 
 });
 
@@ -41,7 +41,7 @@ self.addEventListener('activate', function (event) {
    * Create a function as outlined above, it should be one line
    */
   //https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests
-   //event.waitUntil(clients.claim());
+  event.waitUntil(clients.claim());
 
 
 });
@@ -54,7 +54,7 @@ self.addEventListener('fetch', function (event) {
    */
 
   //https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests
-  /**
+
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
@@ -86,6 +86,6 @@ self.addEventListener('fetch', function (event) {
         );
       })
     );
-    */
+
 
 });
