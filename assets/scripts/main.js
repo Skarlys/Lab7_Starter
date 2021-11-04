@@ -62,6 +62,7 @@ function initializeServiceWorker() {
    *  Initialize the service worker set up in sw.js
    */
   // https://developers.google.com/web/fundamentals/primers/service-workers
+  /**
    if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -73,6 +74,7 @@ function initializeServiceWorker() {
       });
     });
   }
+  */
 
 
 }
@@ -240,17 +242,18 @@ function bindPopstate() {
    * so your navigate() function does not add your going back action to the history,
    * creating an infinite loop
    */
-  console.log('WASSSSUPPP');
-
+  
   window.addEventListener('popstate', (event) => {
-    console.log(event);
-    if(event.state.page != undefined){
-      router.navigate('event.state.page', true);
+    console.log('wtf');
+    if(typeof event.state?.page !== 'undefined'){
+      router.navigate(event.state.page, true);
     }
     else{
-      router.navigate('home', true);
+      router.navigate('home');
     }
 
   });
+
+ 
 
 }

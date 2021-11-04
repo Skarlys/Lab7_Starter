@@ -70,7 +70,7 @@ export class Router {
      *  4. Finally, call the stored function for the given page
      */
 
-    if(this[page] == undefined){
+    if(this[page] === undefined){
       console.log('error ' + this[page]);
     }
     else {
@@ -83,9 +83,10 @@ export class Router {
       }
 
       if(!statePopped && window.location.hash != hash){
-        window.history.pushState({'page': page}, hash, hash);
+        window.history.pushState({'page': page}, page, hash);
       }
       this[page]();
     }
   }
+  
 }
