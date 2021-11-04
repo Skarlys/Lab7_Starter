@@ -74,6 +74,20 @@ function initializeServiceWorker() {
     });
   }
 
+  self.addEventListener('fetch', function(event) {
+    event.respondWith(
+      caches.match(event.request)
+        .then(function(response) {
+          // Cache hit - return response
+          if (response) {
+            return response;
+          }
+          return fetch(event.request);
+        }
+      )
+    );
+  });
+
 }
 
 /**
@@ -140,6 +154,7 @@ function createRecipeCards() {
    * all the recipes. (bonus - add the class 'hidden' to every recipe card with 
    * an index greater  than 2 in your for loop to make show more button functional)
    */
+  
 
     if(i>2){
       recipeCard.classList.add('hidden');
