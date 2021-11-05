@@ -14,7 +14,7 @@ self.addEventListener('install', function (event) {
 
    var urlsToCache = [
      'assets/styles/main.css',
-     'assets/scipts/Router.js'
+     'assets/scipts/Router.js',
      'assets/scripts/main.js'
    ];
    
