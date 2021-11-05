@@ -13,17 +13,19 @@ self.addEventListener('install', function (event) {
   // https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests
 
    var urlsToCache = [
+     '/',
      'assets/styles/main.css',
      'assets/scripts/main.js',
+     /** 
      'https://introweb.tech/assets/json/ghostCookies.json',
      'https://introweb.tech/assets/json/birthdayCake.json',
      'https://introweb.tech/assets/json/chocolateChip.json',
      'https://introweb.tech/assets/json/stuffing.json',
      'https://introweb.tech/assets/json/turkey.json',
      'https://introweb.tech/assets/json/pumpkinPie.json',
+     */
      'assets/scripts/RecipeCard.js',
      'assets/scripts/RecipeExpand.js',
-     'favicon.ico'
    ];
   /**
   var urlsToCache = [
