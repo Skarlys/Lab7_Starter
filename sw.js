@@ -15,7 +15,9 @@ self.addEventListener('install', function (event) {
    var urlsToCache = [
      'assets/styles/main.css',
      'assets/scipts/Router.js',
-     'assets/scripts/main.js'
+     'assets/scripts/main.js',
+     'assets/scripts/RecipeCard.js',
+     'assets/scripts/RecipExpand.js'
    ];
    
      // Perform install steps
