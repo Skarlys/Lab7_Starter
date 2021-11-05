@@ -83,7 +83,7 @@ export class Router {
       }
 
       if(!statePopped && window.location.hash != hash){
-        window.history.pushState({'page': page}, '', window.location.origin + hash);
+        window.history.pushState({'page': page}, '', window.location.origin + window.location.pathname + hash);
       }
       this[page]();
     }

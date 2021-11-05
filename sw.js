@@ -14,7 +14,16 @@ self.addEventListener('install', function (event) {
 
    var urlsToCache = [
      'assets/styles/main.css',
-     'assets/scripts/main.js'
+     'assets/scripts/main.js',
+     'https://introweb.tech/assets/json/ghostCookies.json',
+     'https://introweb.tech/assets/json/birthdayCake.json',
+     'https://introweb.tech/assets/json/chocolateChip.json',
+     'https://introweb.tech/assets/json/stuffing.json',
+     'https://introweb.tech/assets/json/turkey.json',
+     'https://introweb.tech/assets/json/pumpkinPie.json',
+     'assets/scripts/RecipeCard.js',
+     'assets/scripts/RecipeExpand.js',
+     'favicon.ico'
    ];
   /**
   var urlsToCache = [
