@@ -11,11 +11,15 @@ self.addEventListener('install', function (event) {
    */
 
   // https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests
-
+/** 
    var urlsToCache = [
      'assets/styles/main.css',
      'assets/scripts/main.js'
    ];
+   */
+  var urlsToCache = [
+    'https://skarlys.github.io/Lab7_Starter/'
+  ];
    
      // Perform install steps
      event.waitUntil(
