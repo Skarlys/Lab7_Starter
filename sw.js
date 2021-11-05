@@ -14,10 +14,7 @@ self.addEventListener('install', function (event) {
 
    var urlsToCache = [
      'assets/styles/main.css',
-     'assets/scipts/Router.js',
-     'assets/scripts/main.js',
-     'assets/scripts/RecipeCard.js',
-     'assets/scripts/RecipExpand.js'
+     'assets/scripts/main.js'
    ];
    
      // Perform install steps
@@ -62,6 +59,9 @@ self.addEventListener('fetch', function (event) {
     caches.match(event.request)
       .then(function(response) {
         // Cache hit - return response
+
+        console.log(response);
+
         if (response) {
           return response;
         }
